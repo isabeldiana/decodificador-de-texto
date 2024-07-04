@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>decodificador-de-texto</title>
+</head>
+
+<body>
+
+
+  <main>
+
+    <div class="content">
+      <img src="./assets/Logo.png" alt="">
+      <div class="content-text">
+        <textarea placeholder="Digite o seu texto" id="textoInput"></textarea>
+    
+        <div class="content-text-footer">
+          <p> <img src="./assets//bi_exclamation-circle-fill.png" alt="">Apenas letras maiúsculas e sem acento </p>
+          <div class="buttons">
+            <button onclick="criptografar()">Criptografar</button>
+            <button onclick="descriptografar()">Descriptografar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content__result">
+      <img src="./assets/High quality products 1 1.svg" alt="">
+      <h2>Nenhuma mensagem encontrada</h2>
+      <p> Digite um texto que você deseja criptografar ou descriptografar.</p>
+
+    </div>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+
+</html>

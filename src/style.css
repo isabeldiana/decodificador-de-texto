@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+ --dark-blue-100: #609ED4;
+ --dark-blue-200:#356EA9;
+ --dark-blue-300:#0A3871;
+ --dark-blue-400:#072B61;
+ --dark-blue-500:#052051;
+ --light-blue-100:#F3F5FC;
+ --light-blue-200:#EFF1FA;
+ --light-blue-300:#E9ECF8;
+ --ligth-blue-350: #D8DFE8;
+ --light-blue-400:#AAB2D5;
+ --light-blue-500:#757FB2;
+ --gay-100: #CED4DA;
+ --gay-200: #ADB5BD;
+ --gay-300:#868E96;
+ --gay-400: #495057;
+ --gay-500: #343A40;
+ --white: #FFFFFF;
+ --background: #E5E5E5;
+ 
+
+}
+
+body{
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--background);
+
+
+}
+main{
+  height:calc(100vh - 80px);
+
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+.content{
+  width: 100%;
+  height: 600px;
+}
+
+.content-text{
+  height: calc(100% - 50px);
+  padding-left: 200px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.content-text textarea{
+  height: 100%;
+  width: 90%;
+ background-color: transparent;
+ border: none;
+  font-size:32px ;
+  color: var(--dark-blue-300);
+  overflow: hidden;
+  resize: none;  
+  
+}
+.content-text textarea::placeholder{
+
+  color: var(--dark-blue-300);
+}
+
+.content-text textarea:focus{
+
+  border: none; 
+  outline: none;
+
+}
+
+.content-text p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--gay-400);
+}
+
+
+
+.buttons{
+  margin-bottom: 72px;
+  display: flex;
+  gap: 24px;
+}
+.buttons  button{
+  background-color: var(--ligth-blue-350);
+  width: 280px;
+  padding: 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor:pointer;
+  border: 1px solid var(--dark-blue-300);
+  color: var(--dark-blue-300);
+}
+
+.buttons button:first-child{
+  background-color: var(--dark-blue-300);
+  color: var(--white);
+  border: none;
+  
+}
+.content__result{
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  width: 400px;
+ padding: 32px;
+  background-color: white;
+  border-radius: 32px;
+  align-items: center;
+  color: var(--gay-400);
+}
+
+.content__result h2{
+  font-weight: 700;
+  color: var(--gay-500);
+  
+}
+.content__result img{
+  width: 336px;
+  height: 304px;
+}
