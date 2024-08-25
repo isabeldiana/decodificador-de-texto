@@ -21,7 +21,7 @@ const encrypText = () => {
     }
   } else {
     const contentFooterP = document.querySelector('.content-input-footer-p');
-    contentFooterP.style.color = 'red';
+
   }
 
   const result = document.getElementById('result-content');
@@ -55,13 +55,16 @@ const decryptText = () => {
   const result = document.getElementById('result-content');
   result.textContent = phrasesDecrypted;
 
-  const contentResultHidden = document.querySelector('.content__result-section-hidden');
-  contentResultHidden.style.display = 'flex';
+  if (/^[a-z]+$/.test(text)) {
+    const contentResultHidden = document.querySelector('.content__result-section-hidden');
+    contentResultHidden.style.display = 'flex';
 
-  const contentResult = document.querySelector('content__result-section');
-  contentResult.style.display = 'none';
+    const contentResult = document.querySelector('.content__result-section');
+    contentResult.style.display = 'none';
+  }
   return phrasesDecrypted;
 }
+
 
 const copyText = () => {
   let textCopy = document.getElementById('result-content').innerText;

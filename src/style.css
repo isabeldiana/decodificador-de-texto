@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 :root {
-  --dark-blue-100: #609ED4;
-  --dark-blue-200: #356EA9;
-  --dark-blue-300: #0A3871;
-  --dark-blue-400: #072B61;
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #356ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072b61;
   --dark-blue-500: #052051;
-  --light-blue-100: #F3F5FC;
-  --light-blue-200: #EFF1FA;
-  --light-blue-300: #E9ECF8;
-  --ligth-blue-350: #D8DFE8;
-  --light-blue-400: #AAB2D5;
-  --light-blue-500: #757FB2;
-  --gay-100: #CED4DA;
-  --gay-200: #ADB5BD;
-  --gay-300: #868E96;
-  --gay-400: #495057;
-  --gay-500: #343A40;
-  --white: #FFFFFF;
-  --background: #E5E5E5;
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --ligth-blue-350: #d8dfe8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757fb2;
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+  --white: #ffffff;
+  --background: #e5e5e5;
 }
 
 * {
@@ -31,6 +31,24 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-200);
+  border-radius: 16px;
+  border: solid 1px var(--gray-200);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
 }
 
 header {
@@ -47,8 +65,8 @@ main {
   display: flex;
   justify-content: space-between;
   height: 100vh;
+  padding: 40px;
 }
-
 
 .content-input-section {
   height: 100%;
@@ -58,31 +76,28 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 0 32px 200px;
 }
 
 .content-input-section textarea {
-  height: 100%;
-  width: 90%;
+  height: 288px;
+  width: 100%;
   background-color: transparent;
   border: none;
   font-size: 32px;
   color: var(--dark-blue-300);
-  overflow: hidden;
   resize: none;
-  margin-top: 168px;
+  margin-top: calc(168px - 40px);
 }
 
 .content-input-section textarea::placeholder {
-
   color: var(--dark-blue-300);
 }
 
 .content-input-section textarea:focus {
-
   border: none;
   outline: none;
-
 }
 
 .content-input-section p {
@@ -90,12 +105,11 @@ main {
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: var(--gay-400);
+  color: var(--gray-400);
   margin-bottom: 16px;
 }
 
-.buttons {
-  margin-bottom: 72px;
+.content-input-buttons {
   display: flex;
   gap: 24px;
 }
@@ -115,7 +129,6 @@ main {
   background-color: var(--dark-blue-300);
   color: var(--white);
   border: none;
-
 }
 
 .content__result-section {
@@ -123,20 +136,31 @@ main {
   font-family: "Inter", sans-serif;
   text-align: center;
   width: 400px;
+  height: 100%;
   padding: 32px;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 32px;
   align-items: center;
-  color: var(--gay-400);
-  margin: 40px 40px 40px 0;
+  color: var(--gray-400);
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: 0px 10px 12px 2px rgba(0, 0, 0, 0.25);
+  margin-left: 80px;
 }
 
 .content__result-section h2 {
   font-weight: 700;
-  color: var(--gay-500);
+  color: var(--gray-500);
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.content__result-section p {
+  font-weight: 400;
+  color: var(--gray-400);
+  font-size: 16px;
 }
 
 .content__result-section img {
@@ -151,8 +175,11 @@ main {
   padding: 32px;
   background-color: white;
   border-radius: 32px;
-  color: var(--gay-400);
-  margin: 40px 40px 40px 0;
+  color: var(--gray-400);
+  margin: 0;
+  word-break: break-all;
+  box-shadow: 0px 10px 12px 2px rgba(0, 0, 0, 0.25);
+  margin-left: 80px;
 }
 
 .content__result-section-hidden .result-content {
@@ -166,9 +193,11 @@ main {
 .content__result-section-hidden p {
   font-family: "Inter", sans-serif;
   font-size: 24px;
-  color: var(--gay-400);
+  color: var(--gray-400);
+  height: 781px;
+  margin-bottom: 32px;
+  overflow-x: auto;
 }
-
 
 .content__result-section-hidden button {
   display: flex;
@@ -184,23 +213,104 @@ main {
   padding: 24px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 688px;
+  }
 
-@media screen and (max-width: 800px) {
   main {
     display: block;
-    width: 100%;
-    padding: 0 40px;
-  }
-  .content-input-section {
-    width: 100%;
     padding: 0;
+    height: 100%;
+  }
+
+  header {
+    width: 31.09px;
+    height: 50.58px;
+    position: relative;
+    margin: 73.42px 0 0 40px;
+  }
+
+  .content-input-section textarea {
+    margin-top: 116px;
+    margin-bottom: 308px;
+  }
+
+  .content-input-section {
+    padding: 0;
+    width: 100%;
     align-items: center;
     text-align: center;
   }
+
   .content__result-section {
     width: 100%;
+    margin: 0;
+    height: 133px;
+    margin-top: 64px;
   }
+
+  .content__result-section-hidden {
+    width: 100%;
+    margin: 0;
+    height: 343px;
+    margin-top: 64px;
+    margin-bottom: 40px;
+  }
+
+  .content-input-buttons {
+    width: 100%;
+  }
+  .content-input-buttons button {
+    width: 332px;
+  }
+
+  .content__result-section-hidden button {
+    width: 100%;
+  }
+
   .content__result-section img {
     display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 100%;
+    max-width: 375px;
+  }
+  main {
+    padding: 16px;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 16px;
+  }
+
+  .content-input-section textarea {
+    width: 343px;
+    margin-top: 80px;
+
+    margin-bottom: 64px;
+  }
+
+  .content-input-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-input-buttons button {
+    width: 343px;
+  }
+
+  .content__result-section-hidden button {
+    width: 100%;
   }
 }
